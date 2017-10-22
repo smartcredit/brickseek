@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/task
+                            http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <context:property-placeholder ignore-unresolvable="true"
+                                  location="classpath:/config/props/test-config.properties" />
+    <context:component-scan base-package="com" />
+
+    <task:executor id="asyncExecutor" pool-size="5" />
+    <task:scheduler id="asyncScheduler" pool-size="10" />
+    <task:annotation-driven executor="asyncExecutor"
+                            scheduler="asyncScheduler" />
+
+    <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+        <property name="scopes">
+            <map>
+                <entry key="thread">
+                    <bean class="org.springframework.context.support.SimpleThreadScope" />
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="targetLoginInfo" class="com.model.UserLoginInfo">
+        <property name="username" value="${target.login.username}" />
+        <property name="password" value="${target.login.password}" />
+    </bean>
+
+    <bean id="walmartLoginInfo" class="com.model.UserLoginInfo">
+        <property name="username" value="${walmart.login.username}" />
+        <property name="password" value="${walmart.login.password}" />
+    </bean>
+
+    <bean id="brickseekLoginInfo" class="com.model.UserLoginInfo">
+        <property name="username" value="${brickseek.login.username}" />
+        <property name="password" value="${brickseek.login.password}" />
+    </bean>
+
+    <bean id="urlInfo" class="com.config.URLInfo">
+        <property name="brickseek_url" value="${brickseek.url}" />
+        <property name="walmart_url" value="${walmart.url}" />
+        <property name="target_url" value="${target.url}" />
+        <property name="brickseek_target_url" value="${brickseek.target.url}" />
+        <property name="brickseek_walmart_url" value="${brickseek.walmart.url}" />
+    </bean>
+
+    <bean id="globalConfig" class="com.config.GlobalConfiguration" scope="singleton">
+        <property name="targetLoginInfo" ref="targetLoginInfo" />
+        <property name="walmartLoginInfo" ref="walmartLoginInfo" />
+        <property name="brickseekLoginInfo" ref="brickseekLoginInfo" />
+        <property name="urlInfo" ref="urlInfo" />
+        <property name="maxWaitTime" value="${config.maxWaitTime}" />
+        <property name="maxRequestWaitTime" value="${config.maxRequestWaitTime}" />
+    </bean>
+
+</beans>

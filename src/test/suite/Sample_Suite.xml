@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sample1">
+    <parameter name="skuOrUpc" value="953073971" />
+    <parameter name="zip" value="19355" />
+
+
+    <test name="test" >
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="SearchByInput" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

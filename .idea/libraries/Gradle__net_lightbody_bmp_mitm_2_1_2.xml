@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.lightbody.bmp:mitm:2.1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lightbody.bmp/mitm/2.1.2/a5a8ca6f836cc9f68b86c20d98edb1f24c12362/mitm-2.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lightbody.bmp/mitm/2.1.2/cc11f789b185761995c43abd446bb258295b2eaa/mitm-2.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

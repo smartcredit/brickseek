@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.lightbody.bmp:browsermob-core:2.1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lightbody.bmp/browsermob-core/2.1.2/1be7fa8385af4b40559dd37b0878ff191d5d5caf/browsermob-core-2.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lightbody.bmp/browsermob-core/2.1.2/5529842bba4a24132b93dbe118e6b2d1bebbdf9b/browsermob-core-2.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
