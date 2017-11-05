@@ -1,17 +1,180 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="sample1">
-    <parameter name="skuOrUpc" value="953073971" />
-    <parameter name="zip" value="19355" />
+<suite name="sample1" thread-count="5" verbose="2" parallel="tests">
 
-
-    <test name="test" >
+    <test name="BrickseekSearch">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
         <classes>
             <class name="com.shared.BrickseekInteraction">
                 <methods>
-                    <include name="SearchByInput" />
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
                 </methods>
             </class>
         </classes>
     </test>
+
+
+    <test name="BrickseekSearch1">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="BrickseekSearch2">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="BrickseekSearch3">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="BrickseekSearch4">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="BrickseekSearch5">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="BrickseekSearch6">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="BrickseekSearch7">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="BrickseekSearch8">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="BrickseekSearch9">
+        <parameter name="skuOrUpc" value="953073971" />
+        <parameter name="zip" value="19355" />
+        <classes>
+            <class name="com.shared.BrickseekInteraction">
+                <methods>
+                    <include name="openBrickseekWalmart" />
+                    <include name="closeBrickseekWelcomeMsg" />
+                    <include name="clearBrickseekSearchFields" />
+                    <include name="fillBrickseekSearchFields" />
+                    <include name="brickseekSearch" />
+                    <include name="captureSearchResults" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite>

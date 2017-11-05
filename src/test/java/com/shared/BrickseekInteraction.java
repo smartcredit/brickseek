@@ -23,10 +23,10 @@ public class BrickseekInteraction extends AbstractTest {
 
     @Test
     public void closeBrickseekWelcomeMsg(){
-        WebDriverWait wdw = driverUtils.getWait();
-        WebElement element = driverUtils.getWebDriver().findElement(By.id(WebFieldConsts.BRICKSEEK_WELCOME_MSG_CLOSE_ID));
-        if(element.isDisplayed()){
-            wdw.until(ExpectedConditions.presenceOfElementLocated(By.id(WebFieldConsts.BRICKSEEK_WELCOME_MSG_CLOSE_ID)));
+       // WebDriverWait wdw = driverUtils.getWait();
+        WebElement element = driverUtils.waitUntilWelcomeMsgShown();
+        if(element != null && element.isDisplayed()){
+          //  wdw.until(ExpectedConditions.presenceOfElementLocated(By.id(WebFieldConsts.BRICKSEEK_WELCOME_MSG_CLOSE_ID)));
             element.click();
         }
     }
@@ -68,11 +68,9 @@ public class BrickseekInteraction extends AbstractTest {
     @Test
     public void SearchByInput(){
         openBrickseekWalmart();
-        closeBrickseekWelcomeMsg();
-        System.out.println(config.skus.toString());
-        System.out.println(config.zips.toString());
         for(int i=0; i<config.skus.length; i++){
             for(int j=0; j<config.zips.length; j++){
+                closeBrickseekWelcomeMsg();
                 clearBrickseekSearchFields();
                 brickseekUtils.fillField(SKU, config.skus[i]);
                 brickseekUtils.fillField(BRICKSEEK_ZIP, config.zips[j]);
